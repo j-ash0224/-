@@ -13,11 +13,8 @@ app.listen(3000, function(){
 app.set("views","./views");
 app.set("view engine", "ejs");
 
-//경로 설정
-app.get("/", function(req, res){
-    res.render("home/root"); //ejs 파일 불러오기
-});
-
-app.get("/login", function(req, res){
-    res.render("home/login");
-});
+//라우팅 파일을 사용하기 위한 코드
+const route = require("./routes/home/route");
+//라우팅 파일을 읽어와서 변수에 저장
+app.use("/",route);
+//첫번째 파라미터의 경로에서부터 라우팅 파일 사용해서 경로 지정
