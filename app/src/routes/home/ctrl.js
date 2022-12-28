@@ -1,6 +1,6 @@
 //함수를 따로 선언 할 때에는 이름을 부여해야 한다.
 function root (req, res){
-    res.render("home/root"); 
+    res.render("home/root");
 }
 
 function login (req, res){

@@ -5,11 +5,11 @@ const express = require("express"); //express 모듈 추출
 const app = express(); //서버 생성
 
 //ejs를 사용하기 위한 코드
-app.set("views","./views");
+app.set("views","./app/src/views");
 app.set("view engine", "ejs");
 
 //라우팅 파일을 사용하기 위한 코드
-const route = require("./routes/home/route");
+const route = require("./src/routes/home/route");
 //라우팅 파일을 읽어와서 변수에 저장
 app.use("/",route);
 //첫번째 파라미터의 경로에서부터 라우팅 파일 사용해서 경로 지정
