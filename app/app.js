@@ -8,6 +8,9 @@ const app = express(); //서버 생성
 app.set("views","./app/src/views");
 app.set("view engine", "ejs");
 
+// 프런트 js 파일을 이용하기 위한 미들웨어 등록
+app.use(express.static(`${__dirname}/src/public`))
+
 //라우팅 파일을 사용하기 위한 코드
 const route = require("./src/routes/home/route");
 //라우팅 파일을 읽어와서 변수에 저장
